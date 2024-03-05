@@ -22,7 +22,7 @@ $ make create-project
 # or...
 
 $ mkdir -p src
-cp .env.example .env
+$ cp .env.example .env
 $ docker compose build
 $ docker compose up -d
 $ docker compose exec app composer create-project --prefer-dist laravel/laravel .
