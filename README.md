@@ -34,11 +34,6 @@ $ docker compose exec app php artisan migrate
 
 http://localhost
 
-
-## Tips
-
--   Read this [Taskfile](https://github.com/ucan-lab/docker-laravel/blob/main/Taskfile.yml).
-
 ## Container structures
 
 ```bash
