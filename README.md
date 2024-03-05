@@ -22,6 +22,7 @@ $ make create-project
 # or...
 
 $ mkdir -p src
+cp .env.example .env
 $ docker compose build
 $ docker compose up -d
 $ docker compose exec app composer create-project --prefer-dist laravel/laravel .
@@ -33,26 +34,6 @@ $ docker compose exec app php artisan migrate
 
 http://localhost
 
-### Create an existing Laravel project
-
-1. Git clone & change directory
-2. Execute the following command
-
-```bash
-$ make install
-
-# or...
-
-$ docker compose build
-$ docker compose up -d
-$ docker compose exec app composer install
-$ docker compose exec app cp .env.example .env
-$ docker compose exec app php artisan key:generate
-$ docker compose exec app php artisan storage:link
-$ docker compose exec app chmod -R 777 storage bootstrap/cache
-```
-
-http://localhost
 
 ## Tips
 
