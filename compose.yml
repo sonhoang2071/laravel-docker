@@ -75,3 +75,17 @@ services:
         published: ${MAILPIT_PUBLISHED_PORT}
         protocol: tcp
         mode: host
+  npm:
+    image: "node:20.11"
+    volumes:
+      - type: bind
+        source: ./src
+        target: /workspace
+    ports:
+      - target: 2071
+        published: 2071
+        protocol: tcp
+        mode: host
+    restart: unless-stopped
+    tty: true
+    working_dir: /workspace
